@@ -1,6 +1,4 @@
 import Form from '../components/Form.vue';
-import Input from '../components/Input.vue';
-import Button from '../components/Button.vue';
 
 export default {
   title: 'Example/Form',
@@ -15,6 +13,10 @@ export default {
       control: 'object',
       description: 'Configuration for the form submit button',
     },
+    onSubmit: {
+      action: 'submit',
+      description: 'Function triggered when the form is submitted',
+    },
   },
 };
 
@@ -23,7 +25,7 @@ const Template = (args, { argTypes }) => ({
   setup() {
     return { args };
   },
-  template: '<Form v-bind="args" @submit="onSubmit" />',
+  template: '<Form v-bind="args" @submit="args.onSubmit" />',
 });
 
 export const Default = Template.bind({});
@@ -62,5 +64,8 @@ Default.args = {
     backgroundColor: '#007bff',
     color: '#fff',
     disabled: false,
+  },
+  onSubmit: (formData) => {
+    alert(JSON.stringify(formData, null, 2));
   },
 };
