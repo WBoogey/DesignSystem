@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import Bouton from './components/button.vue'
+import Bouton from './components/Button.vue'
 import Input from './components/Input.vue'
 </script>
 
