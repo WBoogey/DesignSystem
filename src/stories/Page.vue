@@ -1,6 +1,5 @@
 <template>
   <article>
-    <my-header :user="user" @login="onLogin" @logout="onLogout" @createAccount="onCreateAccount" />
 
     <section class="storybook-page">
       <h2>Pages in Storybook</h2>
@@ -55,7 +54,6 @@
 
 <script>
 import './page.css';
-import MyHeader from './Header.vue';
 
 export default {
   name: 'my-page',
