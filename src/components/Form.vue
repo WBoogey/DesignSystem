@@ -1,47 +1,15 @@
 <template>
-    <div>
-      <input
-        type="text"
-        :disabled="false"
-        :style="{
-          backgroundColor: 'var(--color-background-section)',
-          color: 'var(--color-text-tertiary)'
-        }"
-      />
-    </div>
-  </template>
+  <div>
+    <Input type="text"  placeholder="Entrez votre texte ici" :disabled="false" />
+    <Button variant="secondary" :disabled="true" >Button</Button>
+  </div>
+</template>
 
-  <script setup>
-  const props = defineProps({
-    type: String,
-    placeholder: String,
-    disabled: Boolean,
-  });
-  </script>
+<script setup>
+import Input from './Input.vue'
+import Button from '../components/Button.vue'
 
-  <style scoped>
-  :root {
-    --color-background-section: #f5f5f5;
-    --color-text-tertiary: #333;
-  }
+</script>
 
-  input {
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  input:focus {
-    outline: none;
-    border-color: #007bff;
-  }
-
-  input:disabled {
-    background-color: var(--color-disabled-bg);
-    color: var(--color-disabled-text);
-    cursor: not-allowed;
-  }
-  </style>
+<style scoped>
+</style>

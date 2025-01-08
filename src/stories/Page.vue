@@ -1,6 +1,5 @@
 <template>
   <article>
-
     <section class="storybook-page">
       <h2>Pages in Storybook</h2>
       <p>

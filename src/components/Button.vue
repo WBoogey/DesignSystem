@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="bouton" :type="props.type" :style="{ backgroundColor: props.backgroundColor, color: props.color }" :disabled="props.disabled">
+    <button :class="['bouton',`button-${variant}`]" :type="props.type" :style="{ backgroundColor: props.backgroundColor, color: props.color }" :disabled="props.disabled">
       <slot></slot>
     </button>
   </div>
@@ -9,11 +9,18 @@
 <script setup>
 const props = defineProps({
   type: String,
+  variant: 'primary' | 'secondary',
   disabled: Boolean,
-  backgroundColor: String,
   color: String,
 })
 </script>
 <style scoped>
+  
+.button-primary{
+  background-color: red;
+}
+.button-secondary{
+  background-color: blue;
+}
 
 </style>
