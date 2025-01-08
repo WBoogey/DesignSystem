@@ -1,4 +1,5 @@
 import Input from '../components/Input.vue';
+import '../style.css';
 
 export default {
   title: 'Components/Input',
@@ -11,8 +12,6 @@ export default {
     },
     placeholder: { control: 'text' },
     disabled: { control: 'boolean' },
-    backgroundColor: { control: 'color' },
-    color: { control: 'color' },
   },
 };
 
@@ -27,10 +26,18 @@ const Template = (args) => ({
 export const Default = Template.bind({});
 Default.args = {
   type: 'text',
+  content: '',
   placeholder: 'Entrez votre texte ici',
   disabled: false,
+  label: 'Champ de texte',
   backgroundColor: 'var(--color-background-section)',
   color: 'var(--color-text-tertiary)',
+};
+
+export const WithoutLabel = Template.bind({});
+WithoutLabel.args = {
+  ...Default.args,
+  label: '',
 };
 
 export const Disabled = Template.bind({});
@@ -44,6 +51,7 @@ Password.args = {
   ...Default.args,
   type: 'password',
   placeholder: 'Entrez votre mot de passe',
+  label: 'Mot de passe',
 };
 
 export const Email = Template.bind({});

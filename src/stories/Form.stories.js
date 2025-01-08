@@ -1,4 +1,5 @@
 import Form from '../components/Form.vue';
+import '../style.css';
 
 export default {
   title: 'Components/Form',
@@ -33,10 +34,4 @@ EnabledButton.args = {
   buttonDisabled: false,
 };
 
-export const CustomColors = Template.bind({});
-CustomColors.args = {
-  inputBackgroundColor: '#e0f7fa',
-  inputColor: '#006064',
-  buttonDisabled: false,
-};
 

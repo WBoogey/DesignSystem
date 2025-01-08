@@ -1,37 +1,48 @@
 <template>
- <div>
+ <div class="input-wrapper">
+    <label v-if="props.label">{{ props.label }}</label>
     <input :type="props.type" :content="props.content" :style="{ backgroundColor: props.backgroundColor, color: props.color }" :placeholder="placeholder" :disabled="props.disabled" />
  </div>
 </template>
 
 <script setup>
+
+
   const props=defineProps({
    type: String,
    placeholder: String,
    disabled: Boolean,
+   label: String,
    backgroundColor: String,
    color: String,
  })
-
 </script>
 
 <style scoped>
- input {
-  padding: 8px 12px;
-  border: 1px solid #ccc;
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input {
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
   border-radius: 4px;
-  font-size: 16px;
+  font-size: var(--font-size-base);
   width: 100%;
   box-sizing: border-box;
+  font-family: var(--font-family-body);
 }
 
 input:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: var(--color-buttons);
 }
 
 input::placeholder {
-  color: #999;
+  color: var(--color-text-tertiary);
 }
 
 input:disabled {

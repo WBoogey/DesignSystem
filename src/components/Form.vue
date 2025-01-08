@@ -1,7 +1,8 @@
 <template>
-  <div>
-    <Input type="text"  placeholder="Entrez votre texte ici" :disabled="false" />
-    <Button variant="secondary" :disabled="true" >Button</Button>
+  <div class="form">
+    <Input label="Lable name" type="text"  placeholder="Entrez votre texte ici" :disabled="false" />
+    <Input label="Label name" type="text"  placeholder="Entrez votre texte ici" :disabled="false" />
+    <Button variant="primary" :disabled="false" >Button</Button>
   </div>
 </template>
 
@@ -12,4 +13,11 @@ import Button from '../components/Button.vue'
 </script>
 
 <style scoped>
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 </style>

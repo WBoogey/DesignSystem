@@ -1,7 +1,7 @@
 <template>
   <div>
     <Input type="text"  placeholder="Entrez votre texte ici" :disabled="false" />
-    <Button type="button" color="white" backgroundColor="var(--color-buttons)" :disabled="true" >Cliquez ici</Button>
+    <Button  class="button  button-primary"  :disabled="false" >Cliquez ici</Button>
   </div>
 </template>
 

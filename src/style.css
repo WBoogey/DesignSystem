@@ -23,7 +23,7 @@
 }
 
 /* Reset CSS */
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -31,18 +31,32 @@
 
 :root {
   --color-Background: #BEE6CE;
-  --color-backgroud-section: #BCFFDB;
+  --color-backgroud-section:#BCFFDB;
   --color-border: #8DFFCD;
-  --color-buttons-hover: #68D89B;
-  --color-buttons: #4F9D69;
+  --color-buttons-focus: #68D89B;
+  --color-disabled: #0C0C0D;
+  /* primary */
+  --color-button-borderP:#154A1A;
+  --color-buttons-activeP: #4F9D69;
+  --color-buttons-hoverP: #4F9D69;
+  /* secondary */
+  --color-buttons-activeS: #8BDD92;
+  --color-button-borderS:#C7D997;
+  --color-buttons-hoverS: #B4C486;
+  --color-disabled:#ccc6c6;
+
 
   /* Couleurs de texte */
   --color-text-primary: #333333;
   --color-text-secondary: #555555;
   --color-text-tertiary: #777777;
 
-  /* couleurs d'erreur */
-  --color-danger: #FF0000;
+  /* couleurs d'erreur || tertiary */
+  --color-danger-focus: #FF0000;
+  --color-danger-hover: #FA0B0B;
+  --color-danger-active: #850505;
+  --color-danger-border: #850505;
+  
 
   /* Tailles de police */
   --font-size-xs: 12px;
