@@ -45,10 +45,3 @@ Danger.args = {
   label: 'tertiary Button',
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-  variant: 'primary',
-  disabled: true,
-  label: 'Disabled Button',
-};
-
