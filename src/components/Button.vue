@@ -26,42 +26,39 @@ const props = defineProps({
 }
 
 .button-primary {
-  background-color: var(--color-buttons-activeP);
+  background-color: var(--color-buttons-Primary);
 }
 
 .button-primary:hover {
-  background-color: var(--color-buttons-hoverP);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .button-primary:focus {
-  border: 2px solid var(--color-button-borderP);
+  border: 2px solid var(--color-button-borderFocusP);
 }
 
 .button-secondary {
-  background-color: var(--color-buttons-activeS);
+  background-color: var(--color-buttons-Secondary);
 }
 
 .button-secondary:hover {
-  background-color: var(--color-buttons-hoverS);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .button-secondary:focus {
-  border: 2px solid var(--color-button-borderS);
+  border: 2px solid var(--color-button-borderFocuS);
 }
 
 .button-tertiary{
-  background-color: var(--color-danger-active);
+  background-color: var( --color-danger);
 }
 
 .button-tertiary:hover {
-  background-color: var(--color-danger-hover);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .button-tertiary:focus {
-  border: 2px solid var(--color-danger-border);
+  border: 2px solid var(--color-danger-borderFocus);
 }
 
 .button:disabled {

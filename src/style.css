@@ -36,13 +36,12 @@
   --color-buttons-focus: #68D89B;
   --color-disabled: #0C0C0D;
   /* primary */
-  --color-button-borderP:#154A1A;
-  --color-buttons-activeP: #4F9D69;
-  --color-buttons-hoverP: #4F9D69;
+  --color-button-borderFocusP:#154A1A;
+  --color-buttons-Primary: #4F9D69;
   /* secondary */
-  --color-buttons-activeS: #8BDD92;
-  --color-button-borderS:#C7D997;
-  --color-buttons-hoverS: #B4C486;
+  --color-buttons-Secondary: #F1F3EB;
+  --color-button-borderFocuS:#93B896;
+  /* Disabled */
   --color-disabled:#ccc6c6;
 
 
@@ -52,10 +51,8 @@
   --color-text-tertiary: #777777;
 
   /* couleurs d'erreur || tertiary */
-  --color-danger-focus: #FF0000;
-  --color-danger-hover: #FA0B0B;
-  --color-danger-active: #850505;
-  --color-danger-border: #850505;
+  --color-danger: #FF0000;
+  --color-danger-borderFocus: #850505;
   
 
   /* Tailles de police */
