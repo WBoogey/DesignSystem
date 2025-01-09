@@ -1,3 +1,4 @@
+import { components } from 'storybook/internal/components';
 import Input from '../components/Input.vue';
 import '../style.css';
 
@@ -12,6 +13,8 @@ export default {
     },
     placeholder: { control: 'text' },
     disabled: { control: 'boolean' },
+    label: { control: 'text' },
+    errorMessage: { control: 'text' },
   },
 };
 
@@ -26,18 +29,18 @@ const Template = (args) => ({
 export const Default = Template.bind({});
 Default.args = {
   type: 'text',
-  content: '',
-  placeholder: 'Entrez votre texte ici',
+  placeholder: 'Enter text here',
+  label: 'Label:',
   disabled: false,
-  label: 'Champ de texte',
+  errorMessage: '',
   backgroundColor: 'var(--color-background-section)',
   color: 'var(--color-text-tertiary)',
 };
 
-export const WithoutLabel = Template.bind({});
-WithoutLabel.args = {
+export const WithError = Template.bind({});
+WithError.args = {
   ...Default.args,
-  label: '',
+  errorMessage: 'Error message',
 };
 
 export const Disabled = Template.bind({});
@@ -50,16 +53,14 @@ export const Password = Template.bind({});
 Password.args = {
   ...Default.args,
   type: 'password',
-  placeholder: 'Entrez votre mot de passe',
-  label: 'Mot de passe',
+  label: 'Password:',
+  placeholder: 'Enter your password',
 };
 
 export const Email = Template.bind({});
-Password.args = {
+Email.args = {
   ...Default.args,
   type: 'email',
-  placeholder: 'Entrez votre email',
+  label: 'Email:',
+  placeholder: 'Enter your email',
 };
-
-
-

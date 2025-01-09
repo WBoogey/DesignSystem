@@ -1,52 +1,67 @@
 <template>
- <div class="input-wrapper">
-    <label v-if="props.label">{{ props.label }}</label>
-    <input :type="props.type" :content="props.content" :style="{ backgroundColor: props.backgroundColor, color: props.color }" :placeholder="placeholder" :disabled="props.disabled" />
- </div>
-</template>
+  <div class="input-wrapper">
+     <label v-if="label" class="input-label">{{ label }}</label>
+     <span v-if="errorMessage" class="input-error">{{ errorMessage }}</span>
+     <input
+       :type="type"
+       :style="{ backgroundColor: backgroundColor, color: color }"
+       :placeholder="placeholder"
+       :disabled="disabled"
+       class="input-field"
+     />
+  </div>
+ </template>
 
-<script setup>
-
-
-  const props=defineProps({
+ <script setup>
+ const props = defineProps({
    type: String,
    placeholder: String,
    disabled: Boolean,
    label: String,
    backgroundColor: String,
    color: String,
- })
-</script>
+   errorMessage: String,
+ });
+ </script>
 
-<style scoped>
+ <style scoped>
+ .input-wrapper {
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+ }
 
-.input-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
+ .input-label {
+   font-size: var(--font-size-small);
+   color: var(--color-text-primary);
+ }
 
-input {
-  padding: 10px 12px;
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
-  font-size: var(--font-size-base);
-  width: 100%;
-  box-sizing: border-box;
-  font-family: var(--font-family-body);
-}
+ .input-field {
+   padding: 10px 12px;
+   border: 1px solid var(--color-border);
+   border-radius: 4px;
+   font-size: var(--font-size-base);
+   width: 100%;
+   box-sizing: border-box;
+   font-family: var(--font-family-body);
+ }
 
-input:focus {
-  outline: none;
-  border-color: var(--color-buttons);
-}
+ .input-field:focus {
+   outline: none;
+   border-color: var(--color-buttons);
+ }
 
-input::placeholder {
-  color: var(--color-text-tertiary);
-}
+ .input-field::placeholder {
+   color: var(--color-text-tertiary);
+ }
 
-input:disabled {
-  background-color: #f5f5f5;
-  cursor: not-allowed;
-}
-</style>
+ .input-field:disabled {
+   background-color: #f5f5f5;
+   cursor: not-allowed;
+ }
+
+ .input-error {
+   color: var(--color-danger);
+   font-size: var(--font-size-small);
+ }
+ </style>
