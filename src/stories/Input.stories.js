@@ -33,20 +33,12 @@ Default.args = {
   label: 'Label:',
   disabled: false,
   errorMessage: '',
-  backgroundColor: 'var(--color-background-section)',
-  color: 'var(--color-text-tertiary)',
 };
 
 export const WithError = Template.bind({});
 WithError.args = {
   ...Default.args,
   errorMessage: 'Error message',
-};
-
-export const Disabled = Template.bind({});
-Disabled.args = {
-  ...Default.args,
-  disabled: true,
 };
 
 export const Password = Template.bind({});

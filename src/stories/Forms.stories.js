@@ -6,10 +6,6 @@ export default {
   component: Form,
   tags: ['autodocs'],
   argTypes: {
-    type: {
-      control: { type: 'select', options: ['login', 'password-change'] },
-      description: 'Type of form to display'
-    },
     onSubmit: { action: 'submitted' }
   },
 };
@@ -29,7 +25,6 @@ const Template = (args) => ({
 
 export const DefaultForm = Template.bind({});
 DefaultForm.args = {
-  type: 'default',
   fields: [
     {
       name: 'name',
@@ -58,7 +53,6 @@ DefaultForm.args = {
 
 export const LoginForm = Template.bind({});
 LoginForm.args = {
-  type: 'login',
   fields: [
     {
       name: 'email',
@@ -81,7 +75,6 @@ LoginForm.args = {
 
 export const ChangePasswordForm = Template.bind({});
 ChangePasswordForm.args = {
-  type: 'password-change',
   fields: [
     {
       name: 'currentPassword',

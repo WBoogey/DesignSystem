@@ -4,7 +4,6 @@
      <span v-if="errorMessage" class="input-error">{{ errorMessage }}</span>
      <input
        :type="type"
-       :style="{ backgroundColor: backgroundColor, color: color }"
        :placeholder="placeholder"
        :disabled="disabled"
        class="input-field"
@@ -18,8 +17,6 @@
    placeholder: String,
    disabled: Boolean,
    label: String,
-   backgroundColor: String,
-   color: String,
    errorMessage: String,
  });
  </script>
