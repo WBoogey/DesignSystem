@@ -1,16 +1,19 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import './style.css';
+import App from './App.vue';
+import router from './router';
 
-createApp(App).mount('#app')
+const app = createApp(App);
 
-module.exports = {
-    staticDirs: ['public'],
-    stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|vue)'],
-    addons: [
-      '@storybook/addon-links',
-      '@storybook/addon-essentials',
-    ],
-    framework: '@storybook/vue3',
-  };
-  
+app.use(router);
+app.mount('#app');
+
+//module.exports = {
+//    staticDirs: ['public'],
+//    stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|vue)'],
+//    addons: [
+//      '@storybook/addon-links',
+//      '@storybook/addon-essentials',
+//    ],
+//    framework: '@storybook/vue3',
+//  };
