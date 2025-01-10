@@ -19,12 +19,12 @@ const Template = (args) => ({
 
 export const Default = Template.bind({});
 Default.args = {
-  name: 'eye-open', 
-  customClass: 'custom-class',  
+  name: 'eye-open', // This references the id in the sprite
+  customClass: 'custom-class',
 };
 
 export const CustomClass = Template.bind({});
 CustomClass.args = {
-  name: 'eye-open', 
+  name: 'eye-open',
   customClass: 'custom-class',
 };

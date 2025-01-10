@@ -1,19 +1,19 @@
 <template>
   <svg :class="`icon ${customClass}`" aria-hidden="true">
-    <use :xlink:href="`#icon-${name}`" />
+    <!-- Reference the symbol in the sprite file -->
+    <use :xlink:href="`/icons.svg#${name}`" />
   </svg>
 </template>
 
 <script setup>
-
 const props = defineProps({
   name: {
     type: String,
-    required: true,
+    required: true, // Name of the icon (e.g., 'eye-open')
   },
   customClass: {
     type: String,
-    default: '',
+    default: '', // Custom CSS class for styling
   },
 });
 </script>
