@@ -1,17 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import SignUp from './Views/SignU.vue';
-import ForgotPassword from './Views/UpdatePassword.vue';
+import SignUp from './view/SignUp.vue';
+import UpdatePassword from './view/UpdatePassword.vue'; // Use the correct import
 
 const routes = [
   {
-    path: '/', 
+    path: '/', // Root path for the SignUp page
     name: 'SignUp',
     component: SignUp,
   },
   {
-    path: '/UpdatePassword',
+    path: '/update-password', // Lowercase and hyphen-separated
     name: 'UpdatePassword',
-    component: ForgotPassword,
+    component: UpdatePassword,
   },
 ];
 

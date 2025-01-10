@@ -13,10 +13,14 @@
       <button type="submit" class="login-button">LOGIN</button>
     </form>
     <p class="forgot-password">
-      Mot de passe oublié ? <a href="UpdatePassword">Réinitialisez-le ici</a>
+      Mot de passe oublié ?
+      <router-link to="/update-password">Réinitialisez-le ici</router-link>
     </p>
   </div>
 </template>
+
+
+
 
 <script>
 export default {
