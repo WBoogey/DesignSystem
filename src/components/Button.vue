@@ -1,7 +1,7 @@
 <template>
   <div>
     <button :class="['button',`button-${variant}`]" :type="props.type"  :disabled="props.disabled">
-      <slot></slot>
+      {{ label }}
     </button>
   </div>
 </template>
@@ -9,8 +9,15 @@
 <script setup>
 
 const props = defineProps({
+  label: {
+    type: String,
+    required: true,
+  },
   variant: 'primary' | 'secondary'| 'tertiary',
-  disabled: Boolean,
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 </script>

@@ -4,44 +4,45 @@ import '../style.css';
 
 export default {
   title: 'Components/Button',
-  component: Button,
+  component: Button, 
   tags: ['autodocs'],
   argTypes: {
     variant: {
-      control: { type: 'select' },
-      options: ['primary', 'secondary', 'tertiary'],
+      control: { type: 'select' }, 
+      options: ['primary', 'secondary', 'tertiary'], 
     },
     disabled: { control: 'boolean' },
-    onClick: { action: 'clicked' },
+    onClick: { action: 'clicked' }, 
   },
-  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: { onClick: fn() },
-};
-
-
-const Template = (args) => ({
-  components: { Button },
-  setup() {
-    return { args };
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args }; 
+    },
+    template: '<Button v-bind="args" />', 
+  }),
+  args: {
+    onClick: fn(),
   },
-  template: '<Button v-bind="args">{{ args.label }}</Button>',
-});
-
-export const Primary = Template.bind({});
-Primary.args = {
-  variant: 'primary',
-  label: 'Primary Button',
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  variant: 'secondary',
-  label: 'Secondary Button',
+export const Primary = {
+  args: {
+    variant: 'primary',
+    label:"Primary Button",
+  },
 };
 
-export const Danger = Template.bind({});
-Danger.args = {
-  variant: 'tertiary',
-  label: 'tertiary Button',
+export const Secondary = {
+  args: {
+    variant: 'secondary',
+    label: 'Secondary Button',
+  },
 };
 
+export const Danger = {
+  args: {
+    variant: 'tertiary',
+    label: 'Tertiary Button',
+  },
+};
