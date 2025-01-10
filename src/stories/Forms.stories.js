@@ -40,7 +40,7 @@ export const DefaultForm = {
       },
     ],
     button: {
-      text: 'Envoyer',
+      label: 'Envoyer',
       variant: 'primary',
     },
   },
@@ -63,7 +63,7 @@ export const LoginForm = {
       },
     ],
     button: {
-      text: 'Se connecter',
+      label: 'Se connecter',
       variant: 'primary',
     },
   },
@@ -92,7 +92,7 @@ export const ChangePasswordForm = {
       },
     ],
     button: {
-      text: 'Changer le mot de passe',
+      label: 'Changer le mot de passe',
       variant: 'secondary',
     },
   },

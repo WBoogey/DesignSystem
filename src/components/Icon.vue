@@ -1,13 +1,12 @@
 <template>
   <div class="svg-icon-wrapper">
     <svg :class="['icon', customClass]" :width="size" :height="size" :fill="color">
-    <use :xlink:href="`/src/assets/sprites/sprite.svg#${name}`"></use>
-  </svg>
+      <use :xlink:href="`/src/assets/sprites/sprite.svg#${name}`"></use>
+    </svg>
   </div>
 </template>
 
 <script setup>
-import { computed } from 'vue';
 const props = defineProps({
   name: {
     type: String,
@@ -19,7 +18,7 @@ const props = defineProps({
   },
   color: {
     type: String,
-    default: 'var(--color-text-primary)'
+    default: 'none'
   },
 });
 </script>
@@ -41,4 +40,3 @@ const props = defineProps({
   transform: scale(1.1);
 }
 </style>
-
